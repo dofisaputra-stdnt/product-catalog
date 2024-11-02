@@ -42,6 +42,10 @@
             <label for="image" class="form-label">Product Image (optional)</label>
             <input type="file" class="form-control" name="image" id="image">
         </div>
+        <div class="mb-3">
+            <label for="image_tag" class="form-label">Image Tag</label>
+            <input type="text" class="form-control" name="image_tag" id="image_tag" value="{{ $product->image_tag }}" required>
+        </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>

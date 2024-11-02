@@ -16,7 +16,7 @@
         <div class="col-md-4 mb-4 d-flex">
             <div class="card h-100 w-100">
                 <div class="img-container">
-                    <img src="{{ asset('images/'.$product->image) }}" class="card-img-top" alt="{{ $product->name }}">
+                    <img src="{{ asset('images/'.$product->image) }}" class="card-img-top" alt="{{ $product->image_tag }}">
                 </div>
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title"><strong>{{ $product->name }}</strong></h5>

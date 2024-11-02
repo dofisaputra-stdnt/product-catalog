@@ -41,6 +41,10 @@
             <label for="image" class="form-label">Product Image</label>
             <input type="file" class="form-control" name="image" id="image" required>
         </div>
+        <div class="mb-3">
+            <label for="image_tag" class="form-label">Image Tag</label>
+            <input type="text" class="form-control" name="image_tag" id="image_tag" required>
+        </div>
         <button type="submit" class="btn btn-primary">Upload</button>
     </form>
 </div>
