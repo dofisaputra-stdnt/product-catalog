@@ -15,9 +15,19 @@ class ProductController extends Controller
      *
      * @return \Illuminate\View\View Tampilan yang menampilkan daftar produk.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
+        $query = Product::query();
+
+        if ($request->has('status') && $request->status != '') {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->has('search') && $request->search != '') {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        $products = $query->get();
         return view('products.index', compact('products'));
     }
 
